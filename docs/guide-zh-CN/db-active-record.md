@@ -485,7 +485,7 @@ Active Record 自动维护脏属性列表。 它保存所有属性的旧值，
 ```php
 $customer = new Customer();
 $customer->loadDefaultValues();
-// $customer->xyz 将被 “zyz” 列定义的默认值赋值
+// $customer->xyz 将被 “xyz” 列定义的默认值赋值
 ```
 
 
@@ -1495,7 +1495,7 @@ class CommentQuery extends ActiveQuery
 > Note: 作为 [[yii\db\ActiveQuery::onCondition()|onCondition()]] 方法的替代方案，你应当
   调用 [[yii\db\ActiveQuery::andOnCondition()|andOnCondition()]] 或 [[yii\db\ActiveQuery::orOnCondition()|orOnCondition()]] 方法来附加新增的条件，不然在一个新定义的查询方法，已存在的条件可能会被覆盖。
 
-然后你就可以先下面这样构建你的查询了：
+然后你就可以像下面这样构建你的查询了：
 
 ```php
 $comments = Comment::find()->active()->all();
